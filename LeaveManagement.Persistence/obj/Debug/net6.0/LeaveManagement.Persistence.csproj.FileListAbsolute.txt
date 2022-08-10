@@ -1,0 +1,17 @@
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\bin\Debug\net6.0\LeaveManagement.Persistence.deps.json
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\bin\Debug\net6.0\LeaveManagement.Persistence.dll
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\bin\Debug\net6.0\LeaveManagement.Persistence.pdb
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\bin\Debug\net6.0\LeaveManagement.Application.dll
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\bin\Debug\net6.0\LeaveManagement.Domain.dll
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\bin\Debug\net6.0\LeaveManagement.Application.pdb
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\bin\Debug\net6.0\LeaveManagement.Domain.pdb
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\LeaveManagement.Persistence.csproj.AssemblyReference.cache
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\LeaveManagement.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\LeaveManagement.Persistence.AssemblyInfoInputs.cache
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\LeaveManagement.Persistence.AssemblyInfo.cs
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\LeaveManagement.Persistence.csproj.CoreCompileInputs.cache
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\LeaveManagement.Persistence.csproj.CopyComplete
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\LeaveManagement.Persistence.dll
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\refint\LeaveManagement.Persistence.dll
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\LeaveManagement.Persistence.pdb
+D:\asp\project\Leave-Management-System-in-ASP.NET\LeaveManagement.Persistence\obj\Debug\net6.0\ref\LeaveManagement.Persistence.dll
