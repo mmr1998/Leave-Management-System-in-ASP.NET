@@ -1,5 +1,5 @@
 ﻿
-using LeaveManagement.Application.Persisence.Contracts;
+using LeaveManagement.Application.Contracts.Persisence;
 using LeaveManagement.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;

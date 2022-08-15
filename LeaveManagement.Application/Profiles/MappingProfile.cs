@@ -30,6 +30,7 @@ namespace LeaveManagement.Application.Profiles
 
             #region LeaveType mappings
             CreateMap<LeaveType, LeaveTypeDto>().ReverseMap();
+            CreateMap<LeaveType, CreateLeaveTypeDto>().ReverseMap();
             CreateMap<LeaveType, LeaveTypeListDto>().ReverseMap();
             #endregion LeaveType mappings
         }

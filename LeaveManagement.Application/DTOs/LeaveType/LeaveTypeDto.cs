@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LeaveManagement.Application.DTOs.LeaveType
 {
-    public class LeaveTypeDto : BaseDto, ILeaveTypeDto
+    public class LeaveTypeDto :  ILeaveTypeDto
     {
         public int LeaveTypeId { get; set; }
         public string Name { get; set; }
