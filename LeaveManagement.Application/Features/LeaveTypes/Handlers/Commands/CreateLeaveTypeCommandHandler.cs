@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
 {
-    internal class CreateLeaveTypeCommandHandler : IRequestHandler<CreateLeaveTypeCommand, BaseCommandResponse>
+    public class CreateLeaveTypeCommandHandler : IRequestHandler<CreateLeaveTypeCommand, BaseCommandResponse>
     {
         private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IMapper _mapper;
