@@ -12,7 +12,8 @@ using System.Threading.Tasks;
 using LeaveManagement.Application.Features.LeaveTypes.Requests.Commands;
 using LeaveManagement.Application.DTOs.LeaveType;
 using Shouldly;
-using System.ComponentModel.DataAnnotations;
+using LeaveManagement.Application.Exceptions;
+using LeaveManagement.Application.Responses;
 
 namespace LeaveManagement.Application.UnitTests.LeaveTypes.Commands
 {
@@ -50,7 +51,7 @@ namespace LeaveManagement.Application.UnitTests.LeaveTypes.Commands
 
             var leaveTypes = await _mockRepo.Object.GetLeaveTypeWithDetails();
 
-            result.ShouldBeOfType<int>();
+            result.ShouldBeOfType<BaseCommandResponse>();
 
             leaveTypes.Count.ShouldBe(3);
         }
@@ -58,18 +59,14 @@ namespace LeaveManagement.Application.UnitTests.LeaveTypes.Commands
         [Fact]
         public async Task InValid_LeaveType_Added()
         {
-            var handler = new CreateLeaveTypeCommandHandler(_mockRepo.Object, _mapper);
             _leaveTypeDto.DefaultDays = -1;
 
-            ValidationException ex = await Should.ThrowAsync<ValidationException>
-                ( async () =>
-                    await _createLeaveTypeCommandHandler.Handle(new CreateLeaveTypeCommand() { leaveTypeDto = _leaveTypeDto}, CancellationToken.None)
-                );
+            var result = await _createLeaveTypeCommandHandler.Handle(new CreateLeaveTypeCommand() { leaveTypeDto = _leaveTypeDto }, CancellationToken.None);
 
             var leaveTypes = await _mockRepo.Object.GetLeaveTypeWithDetails();
 
-            leaveTypes.Count.ShouldBe(2);
-            ex.ShouldNotBeNull();
+            leaveTypes.Count.ShouldBe(3);
+            result.ShouldBeOfType<BaseCommandResponse>();
         }
     }
 }
