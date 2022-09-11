@@ -5,7 +5,7 @@ using LeaveManagement.MVC.Services.Base;
 
 namespace LeaveManagement.MVC.Services
 {
-    public class LeaveTypeService : BaseHttpService //, ILeaveTypeService
+    public class LeaveTypeService : BaseHttpService , ILeaveTypeService
     {
         private readonly ILocalStorageService _localStorageService;
         private readonly IMapper _mapper;
@@ -18,16 +18,16 @@ namespace LeaveManagement.MVC.Services
             this._httpClient = httpClient;
         }
 
-        //public async Task<Response<int>> CreateLeaveType(CreateLeaveTypeVM leaveType)
-        //{
-        //    try
-        //    {
-        //        var response = new Response<int>();
-        //        CreateLeaveTypeDto createLeaveType = _mapper.Map<CreateLeaveTypeDto>(leaveType);
-        //        var apiResponse = await _client.LeaveTypesPOSTAsync(createLeaveType);
-
-        //    }
-        //}
+        public async Task<List<LeaveTypeVM>> GetLeaveTypes()
+        {
+            var leaveTypes = await _client.LeaveTypeAllAsync();
+            return _mapper.Map<List<LeaveTypeVM>>(leaveTypes);  
+        }
+        public async Task<LeaveTypeVM> GetLeaveTypeDetails(int id)
+        {
+            var leaveType = await _client.LeaveTypeGETAsync(id);
+            return _mapper.Map<LeaveTypeVM>(leaveType);
+        }
 
     }
 }

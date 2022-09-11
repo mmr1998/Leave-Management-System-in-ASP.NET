@@ -38,15 +38,18 @@ namespace LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
                 response.Message = "Creation Unsuccessful";
                 response.errors = validationResult.Errors.Select(q=>q.ErrorMessage).ToList();
             }
-                
+            else
+            {
+                var leaveType = _mapper.Map<LeaveType>(request.leaveTypeDto);
+                leaveType = await _leaveTypeRepository.Add(leaveType);
 
-            var leaveType = _mapper.Map<LeaveType>(request.leaveTypeDto);
-            leaveType = await _leaveTypeRepository.Add(leaveType);
+                //return leaveType.LeaveTypeId;
+                response.Success = true;
+                response.Message = "Creation Successful";
+                response.Id = leaveType.LeaveTypeId;
 
-            //return leaveType.LeaveTypeId;
-            response.Success = true;
-            response.Message = "Creation Successful";
-            response.Id = leaveType.LeaveTypeId;
+            }
+
             return response;
         }
     }

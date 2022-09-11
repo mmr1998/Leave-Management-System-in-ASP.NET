@@ -39,6 +39,8 @@ namespace LeaveManagement.API.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateLeaveTypeDto leaveType)
         {
             var command = new CreateLeaveTypeCommand { leaveTypeDto = leaveType };
